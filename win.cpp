@@ -11,7 +11,7 @@
 
 
 win::win(QWidget *parent) :
-        QWidget(parent), ui(new Ui::win) {
+    QWidget(parent), ui(new Ui::win) {
     ui->setupUi(this);
     connect(ui->a2fb,&QPushButton::clicked,this, &win::a2fb);
     connect(ui->a2rec, &QPushButton::clicked,this, &win::a2rec);
