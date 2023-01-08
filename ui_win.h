@@ -12,6 +12,8 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPlainTextEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QTextBrowser>
@@ -29,7 +31,14 @@ public:
     QVBoxLayout *verticalLayout_6;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout_5;
-    QTextBrowser *textBrowser_2;
+    QHBoxLayout *horizontalLayout_3;
+    QLineEdit *boot_path;
+    QPushButton *boot;
+    QHBoxLayout *horizontalLayout_5;
+    QLineEdit *rec_path;
+    QPushButton *rec;
+    QVBoxLayout *verticalLayout_7;
+    QPlainTextEdit *show;
     QVBoxLayout *verticalLayout_4;
     QPushButton *a2fb;
     QPushButton *a2rec;
@@ -63,10 +72,47 @@ public:
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
-        textBrowser_2 = new QTextBrowser(tab);
-        textBrowser_2->setObjectName(QString::fromUtf8("textBrowser_2"));
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        boot_path = new QLineEdit(tab);
+        boot_path->setObjectName(QString::fromUtf8("boot_path"));
+        boot_path->setReadOnly(true);
 
-        verticalLayout_5->addWidget(textBrowser_2);
+        horizontalLayout_3->addWidget(boot_path);
+
+        boot = new QPushButton(tab);
+        boot->setObjectName(QString::fromUtf8("boot"));
+
+        horizontalLayout_3->addWidget(boot);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_3);
+
+        horizontalLayout_5 = new QHBoxLayout();
+        horizontalLayout_5->setObjectName(QString::fromUtf8("horizontalLayout_5"));
+        rec_path = new QLineEdit(tab);
+        rec_path->setObjectName(QString::fromUtf8("rec_path"));
+        rec_path->setReadOnly(true);
+
+        horizontalLayout_5->addWidget(rec_path);
+
+        rec = new QPushButton(tab);
+        rec->setObjectName(QString::fromUtf8("rec"));
+
+        horizontalLayout_5->addWidget(rec);
+
+
+        verticalLayout_5->addLayout(horizontalLayout_5);
+
+        verticalLayout_7 = new QVBoxLayout();
+        verticalLayout_7->setObjectName(QString::fromUtf8("verticalLayout_7"));
+        show = new QPlainTextEdit(tab);
+        show->setObjectName(QString::fromUtf8("show"));
+
+        verticalLayout_7->addWidget(show);
+
+
+        verticalLayout_5->addLayout(verticalLayout_7);
 
 
         horizontalLayout->addLayout(verticalLayout_5);
@@ -158,11 +204,10 @@ public:
     void retranslateUi(QWidget *win)
     {
         win->setWindowTitle(QCoreApplication::translate("win", "win", nullptr));
-        textBrowser_2->setHtml(QCoreApplication::translate("win", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Ubuntu'; font-size:10pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">dwadwad</p></body></html>", nullptr));
+        boot_path->setPlaceholderText(QCoreApplication::translate("win", "boot.img\346\226\207\344\273\266\344\275\215\347\275\256", nullptr));
+        boot->setText(QCoreApplication::translate("win", "boot", nullptr));
+        rec_path->setPlaceholderText(QCoreApplication::translate("win", "recovery.img\346\226\207\344\273\266\344\275\215\347\275\256", nullptr));
+        rec->setText(QCoreApplication::translate("win", "Rec", nullptr));
         a2fb->setText(QCoreApplication::translate("win", "ADB\351\207\215\345\220\257\345\210\260fastboot\346\250\241\345\274\217", nullptr));
         a2rec->setText(QCoreApplication::translate("win", "ADB\351\207\215\345\220\257\345\210\260recovery", nullptr));
         fbre->setText(QCoreApplication::translate("win", "fastboot\351\207\215\345\220\257", nullptr));

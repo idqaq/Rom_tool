@@ -28,13 +28,14 @@ void win::cmdProcess(const QString& program, QStringList& args) {
     });
     connect(process, &QProcess::readyReadStandardError, this, [=]()
     {
-        qDebug()<<"Error";
+        qDebug()<<"Error" << process->error();
     });
     process->start(program,args);
 
     //结果捕获
     QObject::connect(process,&QProcess::readyReadStandardOutput,[=](){
         qDebug()<<"结果捕获:" << process->readAllStandardOutput().data();
+        ui->show->setPlainText(process->readAllStandardOutput().data());
     });
     QString  str = process->readAllStandardOutput(); //捕获输出
     qDebug() << str;
