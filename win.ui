@@ -73,7 +73,14 @@
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_7">
              <item>
-              <widget class="QPlainTextEdit" name="show"/>
+              <widget class="QPlainTextEdit" name="show">
+               <property name="plainText">
+                <string>dwadwadwadwa</string>
+               </property>
+               <property name="placeholderText">
+                <string/>
+               </property>
+              </widget>
              </item>
             </layout>
            </item>
@@ -103,7 +110,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="rebb">
+            <widget class="QPushButton" name="fbbb">
              <property name="text">
               <string>fastboot 烧录 boot</string>
              </property>
@@ -138,9 +145,9 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="reload">
              <property name="text">
-              <string>PushButton</string>
+              <string>刷新</string>
              </property>
             </widget>
            </item>

@@ -29,6 +29,16 @@ private:
     void a2rec();
 
     void fbre();
+
+    void bootPath();
+
+    void recPath();
+
+    void fbbrec();
+
+    void fbbb();
+
+    void reload();
 };
 
 

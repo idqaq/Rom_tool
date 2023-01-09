@@ -43,12 +43,12 @@ public:
     QPushButton *a2fb;
     QPushButton *a2rec;
     QPushButton *fbre;
-    QPushButton *rebb;
+    QPushButton *fbbb;
     QPushButton *fbbrec;
     QPushButton *pushButton_5;
     QPushButton *pushButton;
     QPushButton *pushButton_3;
-    QPushButton *pushButton_2;
+    QPushButton *reload;
     QWidget *tab_2;
     QWidget *tab_3;
     QVBoxLayout *verticalLayout;
@@ -134,10 +134,10 @@ public:
 
         verticalLayout_4->addWidget(fbre);
 
-        rebb = new QPushButton(tab);
-        rebb->setObjectName(QString::fromUtf8("rebb"));
+        fbbb = new QPushButton(tab);
+        fbbb->setObjectName(QString::fromUtf8("fbbb"));
 
-        verticalLayout_4->addWidget(rebb);
+        verticalLayout_4->addWidget(fbbb);
 
         fbbrec = new QPushButton(tab);
         fbbrec->setObjectName(QString::fromUtf8("fbbrec"));
@@ -159,10 +159,10 @@ public:
 
         verticalLayout_4->addWidget(pushButton_3);
 
-        pushButton_2 = new QPushButton(tab);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        reload = new QPushButton(tab);
+        reload->setObjectName(QString::fromUtf8("reload"));
 
-        verticalLayout_4->addWidget(pushButton_2);
+        verticalLayout_4->addWidget(reload);
 
 
         horizontalLayout->addLayout(verticalLayout_4);
@@ -211,12 +211,12 @@ public:
         a2fb->setText(QCoreApplication::translate("win", "ADB\351\207\215\345\220\257\345\210\260fastboot\346\250\241\345\274\217", nullptr));
         a2rec->setText(QCoreApplication::translate("win", "ADB\351\207\215\345\220\257\345\210\260recovery", nullptr));
         fbre->setText(QCoreApplication::translate("win", "fastboot\351\207\215\345\220\257", nullptr));
-        rebb->setText(QCoreApplication::translate("win", "fastboot \347\203\247\345\275\225 boot", nullptr));
+        fbbb->setText(QCoreApplication::translate("win", "fastboot \347\203\247\345\275\225 boot", nullptr));
         fbbrec->setText(QCoreApplication::translate("win", "fastboot \347\203\247\345\275\225 recovery", nullptr));
         pushButton_5->setText(QCoreApplication::translate("win", "PushButton", nullptr));
         pushButton->setText(QCoreApplication::translate("win", "PushButton", nullptr));
         pushButton_3->setText(QCoreApplication::translate("win", "PushButton", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("win", "PushButton", nullptr));
+        reload->setText(QCoreApplication::translate("win", "\345\210\267\346\226\260", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QCoreApplication::translate("win", "\345\210\267\346\234\272", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QCoreApplication::translate("win", "ROM", nullptr));
         textBrowser->setHtml(QCoreApplication::translate("win", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
